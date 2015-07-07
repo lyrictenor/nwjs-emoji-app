@@ -21,6 +21,7 @@
     "eslint": "^0.24.0",
     "eslint-plugin-react": "^2.6.4",
     "extract-text-webpack-plugin": "0.8.2",
+    "html-webpack-plugin": "^1.5.2",
     "node-libs-browser": "^0.5.2",
     "react-hot-loader": "1.2.7",
     "rimraf": "^2.4.1",

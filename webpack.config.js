@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -10,14 +11,18 @@ module.exports = {
     './lib/index'
   ],
   output: {
-    filename: 'app.js',
+    filename: path.join('assets', 'js', '[name].js'),
     path: path.join(__dirname, 'dist'),
-    publicPath: '/assets/'
+    publicPath: ''
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('app.css', { allChunks: true })
+    new ExtractTextPlugin('app.css', { allChunks: true }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'template/index.template.html'
+    })
   ],
   module: {
     loaders: [

@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -8,7 +9,7 @@ module.exports = {
     app: './lib/index.js'
   },
   output: {
-    filename: '[name].min.js',
+    filename: path.join('assets', 'js', '[name].min.js'),
     path: path.join(__dirname, 'dist'),
     publicPath: ''
   },
@@ -25,7 +26,11 @@ module.exports = {
         warnings: false
       }
     }),
-    new ExtractTextPlugin('app.css', { allChunks: true })
+    new ExtractTextPlugin('app.css', { allChunks: true }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'template/index.template.html'
+    })
   ],
   module: {
     loaders: [
