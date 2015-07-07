@@ -21,7 +21,5 @@ npm start
 - [React-Hot-Loader](https://github.com/gaearon/react-hot-loader) for development fun (and productivity).
 - [Webpack](https://github.com/webpack/webpack) for keeping everything together.
 
-----
-
 [travis-url]: https://travis-ci.org/lyrictenor/nwjs-emoji-app
 [travis-image]: https://travis-ci.org/lyrictenor/nwjs-emoji-app.svg?branch=master
