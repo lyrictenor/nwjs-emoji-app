@@ -1,3 +1,5 @@
+[![Build Status][travis-image]][travis-url]
+
 http://emmenko.github.io/redux-react-router-async-example
 
 This is a boilerplate example showcasing mostly [Redux](https://github.com/gaearon/redux) and [React Router](https://github.com/rackt/react-router).
@@ -18,3 +20,8 @@ npm start
 - [React-Router](https://github.com/rackt/react-router) for the other goodness.
 - [React-Hot-Loader](https://github.com/gaearon/react-hot-loader) for development fun (and productivity).
 - [Webpack](https://github.com/webpack/webpack) for keeping everything together.
+
+----
+
+[travis-url]: https://travis-ci.org/lyrictenor/nwjs-emoji-app
+[travis-image]: https://travis-ci.org/lyrictenor/nwjs-emoji-app.svg?branch=master
