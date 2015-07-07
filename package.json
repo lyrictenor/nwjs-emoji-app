@@ -2,15 +2,15 @@
   "name": "emoji-app",
   "version": "0.0.1",
   "description": "",
-  "homepage": "https://github.com/emmenko/redux-react-router-async-example",
-  "author": "Nicola Molinari <emmenko@gmail.com>",
+  "homepage": "https://github.com/lyrictenor/nwjs-emoji-app",
+  "author": "Sanemat <ogataken@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/emmenko/redux-react-router-async-example.git"
+    "url": "https://github.com/lyrictenor/nwjs-emoji-app.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/emmenko/redux-react-router-async-example/issues"
+    "url": "https://github.com/lyrictenor/nwjs-emoji-app/issues"
   },
   "scripts": {
     "build": "npm run clean && npm run lint && webpack",
