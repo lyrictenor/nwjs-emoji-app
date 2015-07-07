@@ -23,6 +23,7 @@
     "extract-text-webpack-plugin": "0.8.2",
     "node-libs-browser": "^0.5.2",
     "react-hot-loader": "1.2.7",
+    "rimraf": "^2.4.1",
     "style-loader": "0.12.3",
     "webpack": "^1.10.1",
     "webpack-dev-server": "1.10.1"
@@ -35,7 +36,7 @@
   },
   "scripts": {
     "build": "npm run clean && npm run lint && webpack",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
     "dist": "npm run build -- --config webpack.config.production.js",
     "lint": "eslint .",
     "start": "npm run build && node server.js",
