@@ -1,32 +1,16 @@
 {
   "name": "emoji-app",
   "version": "0.0.1",
-  "description": "",
-  "homepage": "https://github.com/lyrictenor/nwjs-emoji-app",
   "author": "Sanemat <ogataken@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lyrictenor/nwjs-emoji-app.git"
-  },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lyrictenor/nwjs-emoji-app/issues"
-  },
-  "scripts": {
-    "build": "npm run clean && npm run lint && webpack",
-    "clean": "rm -rf dist",
-    "deploy": "npm run dist && gh-pages -d dist",
-    "dist": "npm run build -- --config webpack.config.production.js",
-    "lint": "eslint",
-    "start": "npm run build && node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "babel-runtime": "5.6.15",
     "classnames": "2.1.2",
-    "redux": "0.12.0",
     "react": "0.13.3",
-    "react-router": "1.0.0-beta2"
+    "react-router": "1.0.0-beta2",
+    "redux": "0.12.0"
   },
   "devDependencies": {
     "babel": "5.6.14",
@@ -41,5 +25,20 @@
     "style-loader": "0.12.3",
     "webpack": "1.10.0",
     "webpack-dev-server": "1.10.1"
+  },
+  "homepage": "https://github.com/lyrictenor/nwjs-emoji-app",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyrictenor/nwjs-emoji-app.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run lint && webpack",
+    "clean": "rm -rf dist",
+    "deploy": "npm run dist && gh-pages -d dist",
+    "dist": "npm run build -- --config webpack.config.production.js",
+    "lint": "eslint",
+    "start": "npm run build && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
