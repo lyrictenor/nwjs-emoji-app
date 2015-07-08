@@ -5,14 +5,12 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    './lib/index'
-  ],
+  entry: {
+    app: './lib/index.js'
+  },
   target: 'node-webkit',
   output: {
-    filename: path.join('assets', 'js', '[name].js'),
+    filename: path.join('js', '[name].dev.js'),
     path: path.join(__dirname, 'dist'),
     publicPath: ''
   },
@@ -21,7 +19,7 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('app.css', { allChunks: true }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: path.join('index.html'),
       template: 'template/index.template.html'
     })
   ],

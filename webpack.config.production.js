@@ -10,7 +10,7 @@ module.exports = {
   },
   target: 'node-webkit',
   output: {
-    filename: path.join('assets', 'js', '[name].min.js'),
+    filename: path.join('js', '[name].min.js'),
     path: path.join(__dirname, 'dist'),
     publicPath: ''
   },
@@ -29,7 +29,7 @@ module.exports = {
     }),
     new ExtractTextPlugin('app.css', { allChunks: true }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: path.join('index.html'),
       template: 'template/index.template.html'
     })
   ],
