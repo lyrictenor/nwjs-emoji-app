@@ -40,7 +40,7 @@
     "clean": "rimraf dist",
     "dev": "npm run build -- --config webpack.config.dev.js",
     "dist": "npm run build -- --config webpack.config.production.js",
-    "lint": "eslint .",
+    "lint": "eslint --ext .js,.jsx lib",
     "local": "npm run build",
     "start": "npm run local && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
