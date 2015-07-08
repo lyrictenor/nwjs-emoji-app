@@ -11,7 +11,7 @@ module.exports = {
     './lib/index'
   ],
   output: {
-    filename: path.join('assets', 'js', '[name].js'),
+    filename: path.join('js', '[name].js'),
     path: path.join(__dirname, 'dist'),
     publicPath: ''
   },
@@ -20,7 +20,7 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('app.css', { allChunks: true }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: path.join('index.html'),
       template: 'template/index.template.html'
     })
   ],
