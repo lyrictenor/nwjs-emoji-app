@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     app: './lib/index.js'
   },
+  target: 'node-webkit',
   output: {
     filename: path.join('assets', 'js', '[name].min.js'),
     path: path.join(__dirname, 'dist'),

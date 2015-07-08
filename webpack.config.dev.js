@@ -10,6 +10,7 @@ module.exports = {
     'webpack/hot/only-dev-server',
     './lib/index'
   ],
+  target: 'node-webkit',
   output: {
     filename: path.join('assets', 'js', '[name].js'),
     path: path.join(__dirname, 'dist'),
