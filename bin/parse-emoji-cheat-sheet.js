@@ -1,5 +1,20 @@
 #!/usr/bin/env node
 import concat from 'concat-stream';
+import cheerio from 'cheerio';
+
 process.stdin.pipe(concat((body) => {
-  console.log(JSON.stringify(body.toString('utf8')));
+  const $ = cheerio.load(body.toString('utf8'));
+  let emoticons = [];
+  const blocks = $('ul.emojis');
+  blocks.each(function(idx, block) {
+    let classes = $(block).attr('class').split(' ');
+    let category = classes.filter((elem) => {
+      return elem != 'emojis';
+    }).pop();
+    $(block).each(function(i, list) {
+      let image = $(list).find('img').attr('src');
+      emoticons.push({image: image, category: category});
+    });
+  });
+  console.log(JSON.stringify(emoticons));
 }));
