@@ -8,7 +8,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './lib/App.jsx'
+    './lib/index.jsx'
   ],
   output: {
     filename: path.join('js', '[name].js'),

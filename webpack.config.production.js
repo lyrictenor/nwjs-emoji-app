@@ -6,7 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'source-map',
   entry: {
-    app: './lib/App.jsx'
+    app: './lib/index.jsx'
   },
   target: 'node-webkit',
   output: {
