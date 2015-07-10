@@ -10,7 +10,7 @@ process.stdin.pipe(concat((body) => {
   blocks.each((idx, block) => {
     let classes = $(block).attr('class').split(' ');
     let category = classes.filter((elem) => {
-      return elem != 'emojis';
+      return elem !== 'emojis';
     }).pop();
 
     $(block).find('li').each((i, list) => {
