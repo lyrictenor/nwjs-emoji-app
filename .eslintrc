@@ -45,7 +45,7 @@
     "react/react-in-jsx-scope": 2,
     "react/self-closing-comp": 2,
     "react/wrap-multilines": 2,
-    "semi": [2, "never"],
+    "semi": [2, "always"],
     "space-before-blocks": [2, "always"],
     "space-before-function-paren": [2, "always"],
     "space-in-brackets": [2, "always", {

@@ -1,13 +1,17 @@
-// import '../assets/stylesheets/index.css'
-import React from 'react'
-import BrowserHistory from 'react-router/lib/BrowserHistory'
-import HashHistory from 'react-router/lib/HashHistory'
-import Root from './Root.jsx'
+import React from 'react';
+import Root from './Root.jsx';
+import { createStore } from 'redux';
+import { Provider } from 'redux/react';
+import * as reducers from '../reducers';
 
-// Use hash location for Github Pages
-// but switch to HTML5 history locally.
-const history = process.env.NODE_ENV === 'production' ?
-  new HashHistory() :
-  new BrowserHistory()
+const store = createStore(reducers);
 
-React.render(<Root history={history} />, document.getElementById('app'))
+export default class App {
+  render () {
+    return (
+      <Provider store={store}>
+        {() => <Root /> }
+      </Provider>
+    );
+  }
+}
