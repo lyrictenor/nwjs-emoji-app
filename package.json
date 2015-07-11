@@ -46,7 +46,7 @@
     "lint": "eslint --ext .js,.jsx lib bin",
     "local": "npm run build",
     "parse": "cat ./emoji-cheat-sheet.com/public/index.html | babel-node bin/parse-emoji-cheat-sheet.js > ./emoji-cheat-sheet-data.json",
-    "resource": "cpx 'assets/**/*' dist/assets",
+    "resource": "cpx 'assets/**/.[!.]*' dist/assets",
     "start": "npm run local && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "verify": "npm run local"
