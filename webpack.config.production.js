@@ -35,8 +35,15 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!cssnext-loader') },
-      { test: /\.jsx?$/, loaders: ['babel'], exclude: /node_modules/ }
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!cssnext-loader')
+      },
+      {
+        test: /\.jsx?$/,
+        loaders: ['babel'],
+        exclude: /node_modules/
+      }
     ]
   }
 };
