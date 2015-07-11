@@ -16,6 +16,10 @@ export default class MainSection extends Component {
   render () {
     const { emojis, actions } = this.props;
     const peopleEmojiData = this.buildData('people');
+    const natureEmojiData = this.buildData('nature');
+    const objectsEmojiData = this.buildData('objects');
+    const placesEmojiData = this.buildData('places');
+    const symbolsEmojiData = this.buildData('symbols');
 
     return (
       <section className='main'>
@@ -28,6 +32,30 @@ export default class MainSection extends Component {
           key='people'
           category='people'
           icons={peopleEmojiData}
+          {...actions}
+          />
+        <IconBox
+          key='nature'
+          category='nature'
+          icons={natureEmojiData}
+          {...actions}
+          />
+        <IconBox
+          key='objects'
+          category='objects'
+          icons={objectsEmojiData}
+          {...actions}
+          />
+        <IconBox
+          key='places'
+          category='places'
+          icons={placesEmojiData}
+          {...actions}
+          />
+        <IconBox
+          key='symbols'
+          category='symbols'
+          icons={symbolsEmojiData}
           {...actions}
           />
       </section>
