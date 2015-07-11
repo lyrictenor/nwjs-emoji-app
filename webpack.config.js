@@ -25,6 +25,15 @@ module.exports = {
     })
   ],
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: [
+          /node_modules/
+        ],
+        loader: 'eslint'
+      }
+    ],
     loaders: [
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!cssnext-loader') },
       { test: /\.jsx?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ }

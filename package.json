@@ -21,6 +21,7 @@
     "cpx": "^1.2.0",
     "css-loader": "^0.15.1",
     "eslint": "^0.24.0",
+    "eslint-loader": "^0.14.1",
     "eslint-plugin-react": "^2.6.4",
     "extract-text-webpack-plugin": "^0.8.2",
     "html-webpack-plugin": "^1.5.2",
