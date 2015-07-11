@@ -15,15 +15,7 @@ export default class MainSection extends Component {
 
   render () {
     const { emojis, actions } = this.props;
-    const emojiData = emojiCheatSheetData.map(emoji => {
-      let file = emoji.image.split('/').pop();
-      let filePath = path.join('assets', 'images', 'emojis', file);
-      emoji.image = filePath;
-      return emoji;
-    });
-    const peopleEmojiData = emojiData.filter((emoji) => {
-      return emoji.category === 'people';
-    });
+    const peopleEmojiData = this.buildData('people');
 
     return (
       <section className='main'>
@@ -40,5 +32,19 @@ export default class MainSection extends Component {
           />
       </section>
     );
+  }
+
+  buildData (category) {
+    const emojiData = emojiCheatSheetData.map(emoji => {
+      let file = emoji.image.split('/').pop();
+      emoji.image = path.join('assets', 'images', 'emojis', file);
+      return emoji;
+    });
+    if (!category) {
+      return emojiData;
+    }
+    return emojiData.filter((emoji) => {
+      return emoji.category === category;
+    });
   }
 }
