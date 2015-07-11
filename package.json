@@ -40,7 +40,7 @@
     "url": "https://github.com/lyrictenor/nwjs-emoji-app.git"
   },
   "scripts": {
-    "build": "npm run clean && npm run resource && npm run lint && webpack",
+    "build": "npm run clean && npm run resource && webpack",
     "clean": "rimraf dist",
     "dev": "npm run build -- --config webpack.config.dev.js",
     "dist": "npm run build -- --config webpack.config.production.js",
@@ -50,6 +50,6 @@
     "resource": "cpx 'assets/**/.[!.]*' dist/assets && cpx 'emoji-cheat-sheet.com/public/graphics/emojis/*.png' dist/assets/images/emojis",
     "start": "npm run local && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "verify": "npm run local"
+    "verify": "npm run local && npm run lint"
   }
 }
