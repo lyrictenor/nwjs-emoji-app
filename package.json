@@ -18,6 +18,7 @@
     "babel-loader": "^5.3.1",
     "cheerio": "^0.19.0",
     "concat-stream": "^1.5.0",
+    "cpx": "^1.2.0",
     "cpy": "^3.3.1",
     "css-loader": "^0.15.1",
     "eslint": "^0.24.0",
@@ -46,6 +47,7 @@
     "lint": "eslint --ext .js,.jsx lib bin",
     "local": "npm run build",
     "parse": "cat ./emoji-cheat-sheet.com/public/index.html | babel-node bin/parse-emoji-cheat-sheet.js > ./emoji-cheat-sheet-data.json",
+    "resource": "cpx 'assets/**/*' dist/assets",
     "start": "npm run local && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "verify": "npm run local"
