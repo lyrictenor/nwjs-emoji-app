@@ -39,7 +39,7 @@
     "url": "https://github.com/lyrictenor/nwjs-emoji-app.git"
   },
   "scripts": {
-    "build": "npm run clean && npm run lint && webpack",
+    "build": "npm run clean && npm run resource && npm run lint && webpack",
     "clean": "rimraf dist",
     "dev": "npm run build -- --config webpack.config.dev.js",
     "dist": "npm run build -- --config webpack.config.production.js",
