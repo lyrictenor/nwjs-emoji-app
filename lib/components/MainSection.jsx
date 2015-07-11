@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import emojiCheatSheetData from '../../emoji-cheat-sheet-data.json';
+import path from 'path';
 
 export default class MainSection extends Component {
   static propTypes = {
@@ -12,6 +14,12 @@ export default class MainSection extends Component {
 
   render () {
     const { emojis, actions } = this.props;
+    const emojiData = emojiCheatSheetData.map(emoji => {
+      let file = emoji.image.split('/').pop();
+      let filePath = path.join('assets', 'images', 'emojis', file);
+      emoji.image = filePath;
+      return emoji;
+    });
 
     return (
       <section className='main'>
