@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import emojiCheatSheetData from '../../emoji-cheat-sheet-data.json';
 import path from 'path';
+import IconBox from './IconBox.jsx';
 
 export default class MainSection extends Component {
   static propTypes = {
@@ -20,14 +21,23 @@ export default class MainSection extends Component {
       emoji.image = filePath;
       return emoji;
     });
+    const peopleEmojiData = emojiData.filter((emoji) => {
+      return emoji.category === 'people';
+    });
 
     return (
       <section className='main'>
         <ul className='emoji-used-list'>
           {emojis.map(emoji =>
-            <li key={emoji.text} {...actions}>{emoji.text}</li>
+              <li key={emoji.text} {...actions}>{emoji.text}</li>
           )}
         </ul>
+        <IconBox
+          key='people'
+          category='people'
+          icons={peopleEmojiData}
+          {...actions}
+          />
       </section>
     );
   }
