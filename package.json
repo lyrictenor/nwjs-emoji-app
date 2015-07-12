@@ -17,6 +17,7 @@
     "babel-core": "^5.6.15",
     "babel-eslint": "^3.1.23",
     "babel-loader": "^5.3.1",
+    "babel-plugin-espower": "^1.0.0",
     "cheerio": "^0.19.0",
     "concat-stream": "^1.5.0",
     "cpx": "^1.2.0",
@@ -32,6 +33,7 @@
     "mocha": "^2.2.5",
     "node-libs-browser": "^0.5.2",
     "posix-cat": "^1.1.1",
+    "power-assert": "^0.11.0",
     "react-hot-loader": "^1.2.7",
     "rimraf": "^2.4.1",
     "style-loader": "^0.12.3",
@@ -54,7 +56,7 @@
     "parse": "cat ./emoji-cheat-sheet.com/public/index.html | babel-node bin/parse-emoji-cheat-sheet.js > ./emoji-cheat-sheet-data.json",
     "resource": "cpx 'assets/images/**/.[!.]*' dist/assets/images && cpx 'emoji-cheat-sheet.com/public/graphics/emojis/*.png' dist/assets/images/emojis",
     "start": "npm run local && node server.js",
-    "test": "mocha --require babel/register -- test/**/*.js",
+    "test": "mocha --require ./babel_hook.js -- test/**/*.js",
     "verify": "npm run local && npm run lint"
   }
 }
