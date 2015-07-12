@@ -7,7 +7,7 @@ import * as EmojiActions from '../actions/EmojiActions';
 export default class Root {
   render () {
     return (
-      <Connector select={state => ({ emojis: state.emojis })}>
+      <Connector select={state => ({ emojis: state.emoji })}>
         {this.renderChild}
       </Connector>
     );
