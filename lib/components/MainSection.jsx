@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import emojiCheatSheetData from '../../emoji-cheat-sheet-data.json';
 import IconBox from './IconBox.jsx';
-import convertImagePath from '../utils/convertImagePath';
+import EmojiMaster from '../utils/emojiMaster';
 
 export default class MainSection extends Component {
   static propTypes = {
@@ -16,6 +15,8 @@ export default class MainSection extends Component {
   render () {
     const { emojis, actions } = this.props;
     const categories = [ 'people', 'nature', 'objects', 'places', 'symbols' ];
+    const master = new EmojiMaster();
+    console.log(master.emojis);
 
     return (
       <section className='main'>
@@ -28,24 +29,11 @@ export default class MainSection extends Component {
           <IconBox
             key={category}
             category={category}
-            icons={this.buildData(category)}
+            icons={master.filterByCategory(category)}
             {...actions}
             />
           )}
       </section>
     );
-  }
-
-  buildData (category) {
-    const emojiData = emojiCheatSheetData.map(emoji => {
-      emoji.image = convertImagePath(emoji.image);
-      return emoji;
-    });
-    if (!category) {
-      return emojiData;
-    }
-    return emojiData.filter((emoji) => {
-      return emoji.category === category;
-    });
   }
 }
