@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import capitalize from 'capitalize';
+import Radium from 'radium';
 
+@Radium
 export default class IconBox extends Component {
   constructor (props, context) {
     super(props, context);
@@ -8,13 +10,19 @@ export default class IconBox extends Component {
 
   render () {
     const { category, icons } = this.props;
+    const styles = {
+      li: {
+        display: 'inline'
+      },
+      img: {}
+    };
 
     return (
       <div>
         <h3>{capitalize(category)}</h3>
         <ul>
           {icons.map(icon =>
-            <li key={icon.name}>
+            <li key={icon.name} style={styles.li}>
               <img
                 src={icon.image}
                 width='32'
