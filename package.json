@@ -57,6 +57,6 @@
     "resource": "cpx 'assets/images/**/.[!.]*' dist/assets/images && cpx 'emoji-cheat-sheet.com/public/graphics/emojis/*.png' dist/assets/images/emojis",
     "start": "npm run local && node server.js",
     "test": "mocha --require ./babel_hook.js -- test/**/*.js",
-    "verify": "npm run local && npm run lint"
+    "verify": "npm run local && npm run lint && npm run test"
   }
 }
