@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import capitalize from 'capitalize';
-import Radium from 'radium';
 
-@Radium
 export default class IconBox extends Component {
   constructor (props, context) {
     super(props, context);
