@@ -14,7 +14,15 @@ export default class IconBox extends Component {
         <h3>{capitalize(category)}</h3>
         <ul>
           {icons.map(icon =>
-            <li key={icon.name}><img src={icon.image} /></li>
+            <li key={icon.name}>
+              <img
+                src={icon.image}
+                width='32'
+                height='32'
+                alt={`:${icon.name}:`}
+                title={`:${icon.name}:`}
+                />
+            </li>
           )}
         </ul>
       </div>
