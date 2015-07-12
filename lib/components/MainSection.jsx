@@ -16,7 +16,6 @@ export default class MainSection extends Component {
     const { emojis, actions } = this.props;
     const categories = [ 'people', 'nature', 'objects', 'places', 'symbols' ];
     const master = new EmojiMaster();
-    console.log(master.emojis);
 
     return (
       <section className='main'>
