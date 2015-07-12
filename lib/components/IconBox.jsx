@@ -10,24 +10,13 @@ export default class IconBox extends Component {
 
   render () {
     const { category, icons } = this.props;
-    const styles = {
-      li: {
-        display: 'inline-block',
-        height: '32px',
-        border: 'solid 1px transparent',
-        ':hover': {
-          background: '#f8f8f8',
-          border: 'solid 1px red'
-        }
-      }
-    };
 
     return (
       <div>
         <h3>{capitalize(category)}</h3>
         <ul>
           {icons.map(icon =>
-            <li key={icon.name} style={styles.li}>
+            <li key={icon.name} className='icon'>
               <img
                 src={icon.image}
                 width='32'
