@@ -12,7 +12,7 @@ export default class IconBox extends Component {
         <h3>{category}</h3>
         <ul>
           {icons.map(icon =>
-            <li><img src={icon.image} /></li>
+            <li key={icon.name}><img src={icon.image} /></li>
           )}
         </ul>
       </div>
