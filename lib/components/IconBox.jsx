@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import capitalize from 'capitalize';
+
 export default class IconBox extends Component {
   constructor (props, context) {
     super(props, context);
@@ -9,10 +11,10 @@ export default class IconBox extends Component {
 
     return (
       <div>
-        <h3>{category}</h3>
+        <h3>{capitalize(category)}</h3>
         <ul>
           {icons.map(icon =>
-            <li><img src={icon.image} /></li>
+            <li key={icon.name}><img src={icon.image} /></li>
           )}
         </ul>
       </div>
