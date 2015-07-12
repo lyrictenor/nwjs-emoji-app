@@ -12,9 +12,14 @@ export default class IconBox extends Component {
     const { category, icons } = this.props;
     const styles = {
       li: {
-        display: 'inline'
-      },
-      img: {}
+        display: 'inline-block',
+        height: '32px',
+        border: 'solid 1px transparent',
+        ':hover': {
+          background: '#f8f8f8',
+          border: 'solid 1px red'
+        }
+      }
     };
 
     return (
