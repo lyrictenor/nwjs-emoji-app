@@ -16,6 +16,7 @@ export default class Icon extends Component {
           height='32'
           alt={`:${icon.name}:`}
           title={`:${icon.name}:`}
+          data-name={icon.name}
           />
       </li>
     );
