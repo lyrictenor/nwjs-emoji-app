@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import emojiCheatSheetData from '../../emoji-cheat-sheet-data.json';
-import path from 'path';
 import IconBox from './IconBox.jsx';
+import convertImagePath from '../utils/convertImagePath';
 
 export default class MainSection extends Component {
   static propTypes = {
@@ -38,8 +38,7 @@ export default class MainSection extends Component {
 
   buildData (category) {
     const emojiData = emojiCheatSheetData.map(emoji => {
-      let file = emoji.image.split('/').pop();
-      emoji.image = path.join('assets', 'images', 'emojis', file);
+      emoji.image = convertImagePath(emoji.image);
       return emoji;
     });
     if (!category) {
