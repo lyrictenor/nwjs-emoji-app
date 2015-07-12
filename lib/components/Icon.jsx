@@ -14,8 +14,8 @@ export default class Icon extends Component {
           src={icon.image}
           width='32'
           height='32'
-          alt={`:${icon.name}:`}
-          title={`:${icon.name}:`}
+          alt={icon.pattern}
+          title={icon.pattern}
           data-name={icon.name}
           />
       </li>
