@@ -56,7 +56,7 @@
     "parse": "cat ./emoji-cheat-sheet.com/public/index.html | babel-node bin/parse-emoji-cheat-sheet.js > ./emoji-cheat-sheet-data.json",
     "resource": "cpx 'assets/images/**/.[!.]*' dist/assets/images && cpx 'emoji-cheat-sheet.com/public/graphics/emojis/*.png' dist/assets/images/emojis",
     "start": "npm run local && node server.js",
-    "test": "mocha --require ./babel_hook.js -- test/**/*.js",
+    "test": "mocha --require ./hook_for_power_assert.js -- test/**/*.js",
     "verify": "npm run local && npm run lint && npm run test"
   }
 }
