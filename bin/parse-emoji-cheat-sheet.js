@@ -23,6 +23,7 @@ process.stdin.pipe(concat((body) => {
         [];
       emoticons.push({
         name: name.text(),
+        pattern: `:${name.text()}:`,
         image: image,
         category: category,
         alternatives: alternatives
