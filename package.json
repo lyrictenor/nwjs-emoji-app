@@ -54,7 +54,9 @@
     "url": "https://github.com/lyrictenor/nwjs-emoji-app.git"
   },
   "scripts": {
-    "sprite": "rimraf ./assets/images/sprite.png ./assets/styles/sprite.css && sprity create ./assets/images/ ./emoji-cheat-sheet.com/public/graphics/emojis/*.png -s ../styles/sprite.css",
+    "spriteclean": "rimraf ./assets/images/sprite.png ./assets/styles/sprite.css",
+    "spritehotfix": "rimraf ./emoji-cheat-sheet.com/public/graphics/emojis/+1.png ./emoji-cheat-sheet.com/public/graphics/emojis/-1.png",
+    "sprite": "npm run spritehotfix && npm run spriteclean && sprity create ./assets/images/ ./emoji-cheat-sheet.com/public/graphics/emojis/*.png -s ../styles/sprite.css --prefix sprite",
     "build": "npm run clean && npm run resource && webpack",
     "changelog": "node ./node_modules/touch/bin/touch.js CHANGELOG.md && conventional-changelog -i CHANGELOG.md --overwrite --preset angular",
     "clean": "rimraf dist",
