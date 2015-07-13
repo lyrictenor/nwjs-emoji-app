@@ -4,6 +4,9 @@ export default class IconImage extends Component {
   constructor (props, context) {
     super(props, context);
   }
+  handleClick (name) {
+    this.props.onAddHistory(name);
+  }
 
   render () {
     const { icon } = this.props;
@@ -16,12 +19,13 @@ export default class IconImage extends Component {
         height='32'
         alt={icon.pattern}
         title={icon.pattern}
-        data-name={icon.name}
+        onClick={this.handleClick.bind(this, icon.name)}
         />
     );
   }
 }
 
 IconImage.propTypes = {
-  icon: PropTypes.object.isRequired
+  icon: PropTypes.object.isRequired,
+  onAddHistory: PropTypes.func.isRequired
 };

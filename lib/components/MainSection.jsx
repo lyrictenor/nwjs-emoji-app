@@ -21,7 +21,10 @@ export default class MainSection extends Component {
         <ul className='emoji-used-list'>
           {emojis.map(emoji =>
             <li className='icon-list' key={emoji.name} >
-              <IconImage icon={emoji} actions={actions} />
+              <IconImage
+                icon={emoji}
+                onAddHistory={actions.addHistory}
+                />
             </li>
           )}
         </ul>
