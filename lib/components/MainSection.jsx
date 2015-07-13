@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import IconBox from './IconBox.jsx';
-import IconImage from './IconImage.jsx';
 import EmojiMaster from '../utils/emojiMaster';
 
 export default class MainSection extends Component {
@@ -18,16 +17,12 @@ export default class MainSection extends Component {
 
     return (
       <section className='main'>
-        <ul className='emoji-used-list'>
-          {emojis.map(emoji =>
-            <li className='icon-list' key={emoji.name} >
-              <IconImage
-                icon={emoji}
-                onAddHistory={actions.addHistory}
-                />
-            </li>
-          )}
-        </ul>
+        <IconBox
+          key='recent'
+          category='recent'
+          icons={emojis}
+          actions={actions}
+          />
         {this.renderEmojisWithCategories()}
       </section>
     );
