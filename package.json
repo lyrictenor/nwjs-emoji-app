@@ -37,6 +37,8 @@
     "power-assert": "^0.11.0",
     "react-hot-loader": "^1.2.7",
     "rimraf": "^2.4.1",
+    "sprity": "^1.0.6",
+    "sprity-cli": "^1.0.1",
     "style-loader": "^0.12.3",
     "touch": "0.0.3",
     "webpack": "^1.10.1",
