@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import capitalize from 'capitalize';
-import IconList from './IconList.jsx';
+import IconImage from './IconImage.jsx';
 
 export default class IconBox extends Component {
   constructor (props, context) {
@@ -8,14 +8,16 @@ export default class IconBox extends Component {
   }
 
   render () {
-    const { category, icons, actions } = this.props;
+    const { category, icons } = this.props;
 
     return (
       <div>
         <h3>{capitalize(category)}</h3>
         <ul>
           {icons.map(icon =>
-            <IconList key={icon.name} icon={icon} {...actions} />
+            <li className='icon-list'>
+              <IconImage icon={icon} />
+            </li>
           )}
         </ul>
       </div>
@@ -25,6 +27,5 @@ export default class IconBox extends Component {
 
 IconBox.propTypes = {
   category: PropTypes.string.isRequired,
-  icons: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+  icons: PropTypes.array.isRequired
 };
