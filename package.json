@@ -1,6 +1,6 @@
 {
   "name": "emoji-app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Sanemat <ogataken@gmail.com>",
   "bugs": {
     "url": "https://github.com/lyrictenor/nwjs-emoji-app/issues"
@@ -20,6 +20,7 @@
     "babel-plugin-espower": "^1.0.0",
     "cheerio": "^0.19.0",
     "concat-stream": "^1.5.0",
+    "conventional-changelog": "^0.1.0-alpha.3",
     "cpx": "^1.2.0",
     "css-loader": "^0.15.1",
     "eslint": "^0.24.0",
@@ -37,6 +38,7 @@
     "react-hot-loader": "^1.2.7",
     "rimraf": "^2.4.1",
     "style-loader": "^0.12.3",
+    "touch": "0.0.3",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1"
   },
@@ -48,6 +50,7 @@
   },
   "scripts": {
     "build": "npm run clean && npm run resource && webpack",
+    "changelog": "node ./node_modules/touch/bin/touch.js CHANGELOG.md && conventional-changelog -i CHANGELOG.md --overwrite --preset angular",
     "clean": "rimraf dist",
     "dev": "npm run build -- --config webpack.config.dev.js",
     "dist": "npm run build -- --config webpack.config.production.js",
