@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import cx from 'classnames';
 
 export default class IconImage extends Component {
   constructor (props, context) {
@@ -10,15 +11,15 @@ export default class IconImage extends Component {
 
   render () {
     const { icon } = this.props;
+    const className = cx(
+      'icon-image',
+      'sprite',
+      `sprite-${icon.name}`
+    );
 
     return (
-      <img
-        className='icon-image'
-        src={icon.image}
-        width='32'
-        height='32'
-        alt={icon.pattern}
-        title={icon.pattern}
+      <span
+        className={className}
         onClick={this.handleClick.bind(this, icon.name)}
         />
     );
