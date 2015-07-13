@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import IconImage from './IconImage.jsx';
 
 export default class IconList extends Component {
   constructor (props, context) {
@@ -6,17 +7,13 @@ export default class IconList extends Component {
   }
 
   render () {
-    const { icon } = this.props;
+    const { icon, actions } = this.props;
 
     return (
-      <li className='icon'>
-        <img
-          src={icon.image}
-          width='32'
-          height='32'
-          alt={icon.pattern}
-          title={icon.pattern}
-          data-name={icon.name}
+      <li className='icon-list'>
+        <IconImage
+          icon={icon}
+          {...actions}
           />
       </li>
     );
@@ -24,5 +21,6 @@ export default class IconList extends Component {
 }
 
 IconList.propTypes = {
-  icon: PropTypes.object.isRequired
+  icon: PropTypes.object.isRequired,
+  actions: PropTypes.object.isRequired
 };
