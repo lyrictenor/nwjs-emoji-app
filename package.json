@@ -49,6 +49,7 @@
   },
   "scripts": {
     "build": "npm run clean && npm run resource && webpack",
+    "changelog": "conventional-changelog -i CHANGELOG.md --overwrite --preset angular",
     "clean": "rimraf dist",
     "dev": "npm run build -- --config webpack.config.dev.js",
     "dist": "npm run build -- --config webpack.config.production.js",
