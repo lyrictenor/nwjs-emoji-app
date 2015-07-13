@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class Icon extends Component {
+export default class IconList extends Component {
   constructor (props, context) {
     super(props, context);
   }
@@ -23,6 +23,6 @@ export default class Icon extends Component {
   }
 }
 
-Icon.propTypes = {
+IconList.propTypes = {
   icon: PropTypes.object.isRequired
 };
