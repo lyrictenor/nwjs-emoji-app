@@ -3,11 +3,6 @@ import IconBox from './IconBox.jsx';
 import EmojiMaster from '../utils/emojiMaster';
 
 export default class MainSection extends Component {
-  static propTypes = {
-    emojis: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
-  };
-
   constructor (props, context) {
     super(props, context);
   }
@@ -47,3 +42,8 @@ export default class MainSection extends Component {
     );
   }
 }
+
+MainSection.propTypes = {
+  emojis: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired
+};
