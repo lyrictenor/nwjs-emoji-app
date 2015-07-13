@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import capitalize from 'capitalize';
-import Icon from './Icon.jsx';
+import IconImage from './IconImage.jsx';
 
 export default class IconBox extends Component {
   constructor (props, context) {
@@ -15,7 +15,12 @@ export default class IconBox extends Component {
         <h3>{capitalize(category)}</h3>
         <ul>
           {icons.map(icon =>
-            <Icon key={icon.name} icon={icon} {...actions} />
+            <li key={icon.name} className='icon-list'>
+              <IconImage
+                icon={icon}
+                onAddHistory={actions.addHistory}
+                />
+            </li>
           )}
         </ul>
       </div>
