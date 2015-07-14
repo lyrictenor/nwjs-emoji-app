@@ -65,6 +65,7 @@
     "git:restore": "cd emoji-cheat-sheet.com/ && git reset --hard HEAD && cd ..",
     "git:tag": "git tag v${npm_package_version}",
     "lint": "eslint --ext .js,.jsx lib bin",
+    "nwjs:pack": "babel-node ./bin/nwjs-pack.js",
     "parse": "cat ./emoji-cheat-sheet.com/public/index.html | babel-node bin/parse-emoji-cheat-sheet.js > ./emoji-cheat-sheet-data.json",
     "resource": "npm run sprite && cpx 'assets/images/**/.[!.]*' dist/assets/images && cpx './package.json' dist",
     "sprite": "npm run sprite:hotfix && npm run sprite:clean && npm run sprite:create",
