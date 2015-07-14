@@ -9,7 +9,7 @@ if (exec('npm run build:dist').code !== 0) {
 }
 
 // clean output path
-if (exec('npm run clean:output').code !== 0) {
+if (exec('node node_modules/rimraf/bin.js ./output').code !== 0) {
   echo('Error: clean:output error.');
   exit(1);
 }
