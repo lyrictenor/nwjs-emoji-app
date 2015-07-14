@@ -1,6 +1,11 @@
 #!/usr/bin/env node
-import { echo, exec, exit } from 'shelljs';
-echo(process.cwd());
+import { echo, exec, exit, pwd, pushd, popd } from 'shelljs';
+import pkg from '../package.json';
+
+const nwjsVersion = '0.12.2';
+const platforms = [ 'win32', 'win64', 'osx32', 'osx64', 'linux32', 'linux64' ];
+
+pushd(pwd());
 
 const buildApplication = 'npm run build:dist';
 if (exec(buildApplication).code !== 0) {
@@ -14,10 +19,8 @@ if (exec(cleanOutPutPath).code !== 0) {
   exit(1);
 }
 
-const nwjsVersion = '0.12.2';
-const platforms = ['win32', 'win64', 'osx32', 'osx64', 'linux32', 'linux64'];
 const nodeWebkitBuilder = 'node' +
-  ' node_modules/node-webkit-builder/bin/nwbuild'+
+  ' node_modules/node-webkit-builder/bin/nwbuild' +
   ` --version '${nwjsVersion}'` +
   ` --platforms '${platforms.join(',')}'` +
   ' ./dist' +
@@ -25,4 +28,9 @@ const nodeWebkitBuilder = 'node' +
 if (exec(nodeWebkitBuilder).code !== 0) {
   echo('Error: nwbuild error.');
   exit(1);
+}
+
+for (let platform of platforms) {
+  pushd(`./output/${pkg.name}/${platform}`);
+  popd();
 }
