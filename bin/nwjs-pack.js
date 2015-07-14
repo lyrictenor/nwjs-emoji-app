@@ -15,12 +15,13 @@ if (exec(cleanOutPutPath).code !== 0) {
 }
 
 const nwjsVersion = '0.12.2';
-const buildTarget = ['win32', 'win64', 'osx32', 'osx64', 'linux32', 'linux64'];
-const nodeWebkitBuilder = 'node node_modules/node-webkit-builder/bin/nwbuild'+
-  ` -v '${nwjsVersion}'` +
-  ` -p '${buildTarget.join(',')}'` +
+const platforms = ['win32', 'win64', 'osx32', 'osx64', 'linux32', 'linux64'];
+const nodeWebkitBuilder = 'node' +
+  ' node_modules/node-webkit-builder/bin/nwbuild'+
+  ` --version '${nwjsVersion}'` +
+  ` --platforms '${platforms.join(',')}'` +
   ' ./dist' +
-  ' -o ./output';
+  ' --buildDir ./output';
 if (exec(nodeWebkitBuilder).code !== 0) {
   echo('Error: nwbuild error.');
   exit(1);
