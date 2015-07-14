@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// NOTE: do not use cd
+// NOTE: do not use cd from shelljs
 import { echo, exec, exit, pwd, pushd, popd, ls } from 'shelljs';
 import pkg from '../package.json';
 
