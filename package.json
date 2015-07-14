@@ -55,9 +55,10 @@
   },
   "scripts": {
     "git:tag": "git tag v${npm_package_version}",
-    "spriteclean": "rimraf ./assets/images/sprite.png ./assets/images/sprite@2x.png ./assets/styles/sprite.css",
-    "spritehotfix": "rimraf ./emoji-cheat-sheet.com/public/graphics/emojis/+1.png ./emoji-cheat-sheet.com/public/graphics/emojis/-1.png",
-    "sprite": "npm run spritehotfix && npm run spriteclean && sprity create ./assets/images/ ./emoji-cheat-sheet.com/public/graphics/emojis/*.png -s ../styles/sprite.css --prefix sprite -d 1:72 -d 2:192",
+    "sprite:clean": "rimraf ./assets/images/sprite.png ./assets/images/sprite@2x.png ./assets/styles/sprite.css",
+    "sprite:hotfix": "rimraf ./emoji-cheat-sheet.com/public/graphics/emojis/+1.png ./emoji-cheat-sheet.com/public/graphics/emojis/-1.png",
+    "sprite:create": "sprity create ./assets/images/ ./emoji-cheat-sheet.com/public/graphics/emojis/*.png -s ../styles/sprite.css --prefix sprite -d 1:72 -d 2:192",
+    "sprite": "npm run sprite:hotfix && npm run sprite:clean && npm run sprite:create",
     "build": "npm run clean && npm run resource && webpack",
     "changelog": "node ./node_modules/touch/bin/touch.js CHANGELOG.md && conventional-changelog -i CHANGELOG.md --overwrite --preset angular",
     "clean": "rimraf dist",
