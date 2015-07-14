@@ -54,21 +54,24 @@
     "url": "https://github.com/lyrictenor/nwjs-emoji-app.git"
   },
   "scripts": {
-    "spriteclean": "rimraf ./assets/images/sprite.png ./assets/images/sprite@2x.png ./assets/styles/sprite.css",
-    "spritehotfix": "rimraf ./emoji-cheat-sheet.com/public/graphics/emojis/+1.png ./emoji-cheat-sheet.com/public/graphics/emojis/-1.png",
-    "sprite": "npm run spritehotfix && npm run spriteclean && sprity create ./assets/images/ ./emoji-cheat-sheet.com/public/graphics/emojis/*.png -s ../styles/sprite.css --prefix sprite -d 1:72 -d 2:192",
     "build": "npm run clean && npm run resource && webpack",
+    "build:dev": "npm run build -- --config webpack.config.dev.js",
+    "build:dist": "npm run build -- --config webpack.config.production.js",
+    "build:local": "npm run build",
     "changelog": "node ./node_modules/touch/bin/touch.js CHANGELOG.md && conventional-changelog -i CHANGELOG.md --overwrite --preset angular",
     "clean": "rimraf dist",
-    "dev": "npm run build -- --config webpack.config.dev.js",
-    "dist": "npm run build -- --config webpack.config.production.js",
+    "git:restore": "cd emoji-cheat-sheet.com/ && git reset --hard HEAD && cd ..",
+    "git:tag": "git tag v${npm_package_version}",
     "lint": "eslint --ext .js,.jsx lib bin",
-    "local": "npm run build",
     "parse": "cat ./emoji-cheat-sheet.com/public/index.html | babel-node bin/parse-emoji-cheat-sheet.js > ./emoji-cheat-sheet-data.json",
     "resource": "npm run sprite && cpx 'assets/images/**/.[!.]*' dist/assets/images && cpx './package.json' dist",
-    "start": "npm run local && node server.js",
+    "sprite": "npm run sprite:hotfix && npm run sprite:clean && npm run sprite:create",
+    "sprite:clean": "rimraf ./assets/images/sprite.png ./assets/images/sprite@2x.png ./assets/styles/sprite.css",
+    "sprite:create": "sprity create ./assets/images/ ./emoji-cheat-sheet.com/public/graphics/emojis/*.png -s ../styles/sprite.css --prefix sprite -d 1:72 -d 2:192",
+    "sprite:hotfix": "rimraf ./emoji-cheat-sheet.com/public/graphics/emojis/+1.png ./emoji-cheat-sheet.com/public/graphics/emojis/-1.png",
+    "start": "npm run build:local && node server.js",
     "test": "mocha --require ./hook_for_power_assert.js -- test/**/*.js",
-    "verify": "npm run local && npm run lint && npm run test && npm run dev && npm run dist"
+    "verify": "npm run build:local && npm run lint && npm run test && npm run build:dev && npm run build:dist"
   },
   "window": {
     "width": 800
