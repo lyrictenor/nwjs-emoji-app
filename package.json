@@ -60,6 +60,7 @@
     "build:local": "npm run build",
     "changelog": "node ./node_modules/touch/bin/touch.js CHANGELOG.md && conventional-changelog -i CHANGELOG.md --overwrite --preset angular",
     "clean": "rimraf dist",
+    "git:restore": "cd emoji-cheat-sheet.com/ && git reset --hard HEAD && cd ..",
     "git:tag": "git tag v${npm_package_version}",
     "lint": "eslint --ext .js,.jsx lib bin",
     "parse": "cat ./emoji-cheat-sheet.com/public/index.html | babel-node bin/parse-emoji-cheat-sheet.js > ./emoji-cheat-sheet-data.json",
