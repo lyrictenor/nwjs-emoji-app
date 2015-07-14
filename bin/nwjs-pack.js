@@ -14,9 +14,11 @@ if (exec(cleanOutPutPath).code !== 0) {
   exit(1);
 }
 
+const nwjsVersion = '0.12.2';
+const buildTarget = ['win32', 'win64', 'osx32', 'osx64', 'linux32', 'linux64'];
 const nodeWebkitBuilder = 'node node_modules/node-webkit-builder/bin/nwbuild'+
-  ' -v "0.12.2"' +
-  ' -p "win32,win64,osx32,osx64,linux32,linux64"' +
+  ` -v '${nwjsVersion}'` +
+  ` -p '${buildTarget.join(',')}'` +
   ' ./dist' +
   ' -o ./output';
 if (exec(nodeWebkitBuilder).code !== 0) {
