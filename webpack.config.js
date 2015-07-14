@@ -22,7 +22,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: path.join('index.html'),
       template: 'template/index.template.html'
-    })
+    }),
+    new webpack.IgnorePlugin(/vertx/),
+    new webpack.ExternalsPlugin("commonjs", "nw.gui")
   ],
   module: {
     preLoaders: [
