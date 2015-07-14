@@ -20,6 +20,7 @@ export default class IconImage extends Component {
     return (
       <span
         className={className}
+        title={icon.pattern}
         onClick={this.handleClick.bind(this, icon.name)}
         />
     );
