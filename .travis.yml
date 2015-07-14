@@ -7,3 +7,5 @@ script: "npm run verify"
 notifications:
   email:
   - ogataken@gmail.com
+after_success:
+- "npm run nwjs:pack"
