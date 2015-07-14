@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-import { echo, exec, exit, pwd, pushd, popd } from 'shelljs';
+
+// NOTE: do not use cd
+import { echo, exec, exit, pwd, pushd, popd, ls } from 'shelljs';
 import pkg from '../package.json';
 
 const nwjsVersion = '0.12.2';
 const platforms = [ 'win32', 'win64', 'osx32', 'osx64', 'linux32', 'linux64' ];
 
-pushd(pwd());
+echo(pwd());
 
 const buildApplication = 'npm run build:dist';
 if (exec(buildApplication).code !== 0) {
@@ -34,3 +36,7 @@ for (let platform of platforms) {
   pushd(`./output/${pkg.name}/${platform}`);
   popd();
 }
+
+echo('Packed list');
+ls('-A', './output');
+echo('nwjs:pack complete!');
