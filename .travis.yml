@@ -7,3 +7,20 @@ script: "npm run verify"
 notifications:
   email:
   - ogataken@gmail.com
+after_success:
+- "node bin/is-travis-tag-build.js && npm run nwjs:pack"
+deploy:
+  provider: releases
+  api_key:
+    secure: "LWhrZ71Wvw9fl17rv46bKNsT29YC/x6EkGmy6rRvTk3Dm3AXOuuNSI2DHtWpoOklMptTkJVpZmzzzgrrrT9VDQzRRhpEHhQnPNAroFv4Z35VTwgBR5VKgSOvnANUo/XnSrQ6a9Mjprv5u6ix6HcBzsYj10cJeXeEWtGKqe3eNmPmdDaOc7qdkkuN40GkgNeJ3hokPdCUBnO3BRHdP1brddUNclRPqz0ii++nw2frggSzBHYp175Id/jQZ4fQ8yI2EhWpisi31ph7A5NQYnN0syrLxVTXJrNxNgGfIyvxYgopDZLy2DP91ffmvb8bCZisvj2aEcUe4QvFfl5rxN7lMKMQQKeKoCNQ3aom7EkR/GuhT0QMPEzDEJ0sG1S5VfuV3Prk212yPi2csLDupvl4KeQywXMmiLQfSO7LtEcYhDwXRQIBdv721H5Ul+7Xwh4xZ7o1ZBLGkoJdhtftsThb9SkVW5vHcR+gXW8O4pMWLQuw3wehhzthlUSjL1vvlW+MXjrWPTjawFG9xBdg8qF7NcrxxnA8djUZXDmTFdyvPCaclYVSIYD/ot19GzDKjHc5wyhKp0pm7A7L9AMsiS9mIrVXTAn4H28P+zOBtUjoZa0OZsaOTiygaI4RHES7BNrQ+PoeUInpv08c18hcZvm3BlQYC2cYubaKnoWhDAopwN8="
+  file:
+  - "output/emoji-app-win32.zip"
+  - "output/emoji-app-win64.zip"
+  - "output/emoji-app-osx32.zip"
+  - "output/emoji-app-osx64.zip"
+  - "output/emoji-app-linux32.zip"
+  - "output/emoji-app-linux64.zip"
+  on:
+    repo: lyrictenor/nwjs-emoji-app
+    tags: true
+  skip_cleanup: true
