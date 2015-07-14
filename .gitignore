@@ -2,6 +2,7 @@
 npm-debug.log
 node_modules
 dist
+output
 
 assets/images/sprite.png
 assets/styles/sprite.css
