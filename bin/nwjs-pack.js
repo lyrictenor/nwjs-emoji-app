@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-// NOTE: do not use cd from shelljs
-import { echo, exec, exit, pwd, pushd, popd, ls } from 'shelljs';
+import { echo, exec, exit, pwd, ls } from 'shelljs';
+import fs from 'fs';
+import archiver from 'archiver';
 import pkg from '../package.json';
 
 const nwjsVersion = '0.12.2';
@@ -32,11 +33,47 @@ if (exec(nodeWebkitBuilder).code !== 0) {
   exit(1);
 }
 
-for (let platform of platforms) {
-  pushd(`./output/${pkg.name}/${platform}`);
-  popd();
-}
+const pack = (name, platform) => {
+  return new Promise((resolve, reject) => {
+    let outputPath = `./output/${name}-${platform}.zip`;
+    let output = fs.createWriteStream(outputPath);
+    let archive = archiver('zip');
 
-echo('Packed list');
-ls('-A', './output');
-echo('nwjs:pack complete!');
+    output.on('close', () => {
+      echo(`Packed: ${outputPath}`);
+      echo(`${archive.pointer()} total bytes`);
+      resolve(outputPath);
+    });
+
+    archive.on('error', (err) => {
+      echo(`Error: pack ${outputPath}`);
+      reject(new Error(err));
+    });
+
+    archive.pipe(output);
+    archive.bulk([
+      {
+        src: ['**/*'],
+        cwd: `./output/${name}/${platform}`,
+        dest: `${name}-${platform}`,
+        expand: true
+      }
+    ]);
+    archive.finalize();
+  });
+};
+
+Promise.all(
+  platforms.map((platform) => {
+    return pack(pkg.name, platform);
+  })
+).then(() => {
+  echo('');
+  echo('Packed list');
+  echo(ls('-A', './output/*.zip'));
+  echo('nwjs:pack complete!');
+}).catch((error) => {
+  echo('pack error');
+  echo(error);
+  exit(1);
+});
