@@ -47,7 +47,7 @@
     "sprity": "^1.0.6",
     "sprity-cli": "^1.0.1",
     "style-loader": "^0.12.3",
-    "touch": "0.0.3",
+    "touch": "^1.0.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1"
