@@ -16,14 +16,13 @@ if (exec(buildApplication).code !== 0) {
   exit(1);
 }
 
-const cleanOutPutPath = 'node node_modules/rimraf/bin.js ./output';
+const cleanOutPutPath = './node_modules/.bin/rimraf ./output';
 if (exec(cleanOutPutPath).code !== 0) {
   echo('Error: clean output error.');
   exit(1);
 }
 
-const nodeWebkitBuilder = 'node' +
-  ' node_modules/node-webkit-builder/bin/nwbuild' +
+const nodeWebkitBuilder = './node_modules/.bin/nwbuild' +
   ` --version '${nwjsVersion}'` +
   ` --platforms '${platforms.join(',')}'` +
   ' ./dist' +
