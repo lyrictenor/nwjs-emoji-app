@@ -1,3 +1,13 @@
+<a name="0.2.0"></a>
+# 0.2.0 (2015-07-17)
+
+
+### Features
+
+* **clipboard:** write emoji pattern to clipboard ([0f2c134](https://github.com/lyrictenor/nwjs-emoji-app/commit/0f2c134))
+
+
+
 <a name="0.1.4"></a>
 ## 0.1.4 (2015-07-17)
 
