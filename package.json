@@ -64,7 +64,7 @@
     "build:dev": "npm run build -- --config webpack.config.dev.js",
     "build:dist": "npm run build -- --config webpack.config.production.js",
     "build:local": "npm run build",
-    "changelog": "node ./node_modules/touch/bin/touch.js CHANGELOG.md && conventional-changelog -i CHANGELOG.md --overwrite --preset angular",
+    "changelog": "touch CHANGELOG.md && conventional-changelog -i CHANGELOG.md --overwrite --preset angular",
     "clean": "rimraf dist",
     "david": "david update",
     "fixpack": "fixpack",
