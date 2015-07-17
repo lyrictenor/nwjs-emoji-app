@@ -1,3 +1,13 @@
+<a name="0.3.0"></a>
+# 0.3.0 (2015-07-17)
+
+
+### Features
+
+* **tray:** use tray ([841eb6a](https://github.com/lyrictenor/nwjs-emoji-app/commit/841eb6a))
+
+
+
 <a name="0.2.0"></a>
 # 0.2.0 (2015-07-17)
 
