@@ -73,7 +73,7 @@
     "lint": "eslint --ext .js,.jsx lib bin",
     "nwjs:pack": "babel-node ./bin/nwjs-pack.js",
     "parse": "cat ./emoji-cheat-sheet.com/public/index.html | babel-node bin/parse-emoji-cheat-sheet.js > ./emoji-cheat-sheet-data.json",
-    "resource": "npm run sprite && cpx 'assets/images/**/.[!.]*' dist/assets/images && cpx './package.json' dist",
+    "resource": "npm run sprite && cpx \"./assets/images/innocent*.png\" ./dist/images && cpx \"./package.json\" ./dist",
     "sprite": "npm run sprite:hotfix && npm run sprite:clean && npm run sprite:create",
     "sprite:clean": "rimraf ./assets/images/sprite.png ./assets/images/sprite@2x.png ./assets/styles/sprite.css",
     "sprite:create": "sprity create ./assets/images/ ./emoji-cheat-sheet.com/public/graphics/emojis/*.png -s ../styles/sprite.css --prefix sprite -d 1:72 -d 2:192",
