@@ -4,6 +4,9 @@
 
 > NW.js app for choosing an emoji and copy to clipboard :tada:
 
+Enjoy emoji life!
+
+
 ![emoji-app](https://cloud.githubusercontent.com/assets/75448/8761901/4aa96530-2da3-11e5-929e-185ff0f63f61.gif)
 
 
@@ -57,13 +60,13 @@ Copyright (c) 2015 sanemat. Licensed under the MIT license.
 
 ### Emoji images
 
-See [license-emoji-images](./license-emoji-images)
+See [license-emoji-images](./license-emoji-images).
 
 ### Emoji Text mapping data
 
-See [license-emoji-mapping-data](./license-emoji-mapping-data)
+See [license-emoji-mapping-data](./license-emoji-mapping-data).
 
-[Emoji cheat sheet for GitHub, Basecamp and other services](http://www.emoji-cheat-sheet.com/)
+These emoji data are based on [Emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com/).
 
 
 [travis-url]: https://travis-ci.org/lyrictenor/nwjs-emoji-app
