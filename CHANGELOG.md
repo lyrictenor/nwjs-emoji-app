@@ -1,3 +1,15 @@
+<a name="0.5.0"></a>
+# 0.5.0 (2015-07-18)
+
+
+### Features
+
+* **notification:** add react-notification ([1ef5a0a](https://github.com/lyrictenor/nwjs-emoji-app/commit/1ef5a0a))
+* **notification:** add style ([872d476](https://github.com/lyrictenor/nwjs-emoji-app/commit/872d476))
+* **notification:** toggle notification node ([faa8f78](https://github.com/lyrictenor/nwjs-emoji-app/commit/faa8f78))
+
+
+
 <a name="0.4.1"></a>
 ## 0.4.1 (2015-07-18)
 
