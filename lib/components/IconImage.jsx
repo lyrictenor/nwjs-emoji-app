@@ -5,8 +5,8 @@ export default class IconImage extends Component {
   constructor (props, context) {
     super(props, context);
   }
-  handleClick (name) {
-    this.props.onAddHistory(name);
+  handleClick (icon) {
+    this.props.onAddHistory(icon);
   }
 
   render () {
@@ -21,7 +21,7 @@ export default class IconImage extends Component {
       <span
         className={className}
         title={icon.pattern}
-        onClick={this.handleClick.bind(this, icon.name)}
+        onClick={this.handleClick.bind(this, icon)}
         />
     );
   }
