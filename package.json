@@ -55,6 +55,11 @@
     "webpack-dev-server": "^1.10.1"
   },
   "homepage": "https://github.com/lyrictenor/nwjs-emoji-app",
+  "keywords": [
+    "emoji",
+    "icon",
+    "nwjs"
+  ],
   "license": "MIT",
   "main": "index.html",
   "repository": {
@@ -86,6 +91,8 @@
   },
   "window": {
     "width": 800,
+    "icon": "images/innocent.png",
+    "title": "Emoji App",
     "toolbar": false
   }
 }
