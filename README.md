@@ -62,6 +62,7 @@ See [license-emoji-images](./license-emoji-images)
 ### Emoji Text mapping data
 
 See [license-emoji-mapping-data](./license-emoji-mapping-data)
+
 [Emoji cheat sheet for GitHub, Basecamp and other services](http://www.emoji-cheat-sheet.com/)
 
 
