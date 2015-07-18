@@ -29,6 +29,11 @@ Currently, it uses :
 * [Awesome Node.js CLI (cross platform)](https://github.com/lyrictenor/awesome-nodejs-cross-platform-cli);
 
 
+## :neckbeard: Changelog
+
+[changelog](./CHANGELOG.md)
+
+
 ## :hammer: Development
 
 ### On NW.js
