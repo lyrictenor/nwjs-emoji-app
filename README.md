@@ -17,7 +17,7 @@ OS X, Windows, Linux support.
 Currently, it uses :
 
 * [React](http://facebook.github.io/react/) with [JSX](https://facebook.github.io/jsx/);
-* [Redux](https://github.com/gaearon/redux) for the _Atomic Flux_ architecture. ([Flux implementation](http://facebook.github.io/flux/);
+* [Redux](https://github.com/gaearon/redux) for the _Atomic Flux_ architecture. ([Flux implementation](http://facebook.github.io/flux/));
 * [Babel](https://babeljs.io/) for ES6/ES7 transpilation and linting;
 * [Webpack](http://webpack.github.io/) for the tooling;
 * [NW.js](http://nwjs.io/);
