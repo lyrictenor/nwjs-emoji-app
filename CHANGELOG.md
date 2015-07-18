@@ -1,3 +1,16 @@
+<a name="0.4.0"></a>
+# 0.4.0 (2015-07-18)
+
+
+### Features
+
+* **history:** init with saved data ([432f1ed](https://github.com/lyrictenor/nwjs-emoji-app/commit/432f1ed))
+* **history:** save history to localstorage ([75f7d2c](https://github.com/lyrictenor/nwjs-emoji-app/commit/75f7d2c))
+* **localstorage:** use localstorage ([4ccbc92](https://github.com/lyrictenor/nwjs-emoji-app/commit/4ccbc92))
+* **thunk:** use redux-thunk ([825706e](https://github.com/lyrictenor/nwjs-emoji-app/commit/825706e))
+
+
+
 <a name="0.3.1"></a>
 ## 0.3.1 (2015-07-18)
 
