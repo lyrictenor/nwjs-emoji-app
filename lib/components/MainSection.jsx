@@ -17,7 +17,7 @@ export default class MainSection extends Component {
     const { emojis, actions } = this.props;
 
     return (
-      <section className='main'>
+      <article className='main'>
         {this.renderNotification()}
         <IconBox
           key='recent'
@@ -27,7 +27,7 @@ export default class MainSection extends Component {
           toggleNotification={this.toggleNotification.bind(this)}
           />
         {this.renderEmojisWithCategories()}
-      </section>
+      </article>
     );
   }
 
