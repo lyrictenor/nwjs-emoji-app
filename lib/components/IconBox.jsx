@@ -8,7 +8,7 @@ export default class IconBox extends Component {
   }
 
   render () {
-    const { category, icons, actions } = this.props;
+    const { category, icons, actions, toggleNotification } = this.props;
 
     return (
       <div>
@@ -19,6 +19,7 @@ export default class IconBox extends Component {
               <IconImage
                 icon={icon}
                 onAddHistory={actions.addHistory}
+                toggleNotification={toggleNotification}
                 />
             </li>
           )}
@@ -31,5 +32,6 @@ export default class IconBox extends Component {
 IconBox.propTypes = {
   category: PropTypes.string.isRequired,
   icons: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
+  toggleNotification: PropTypes.func.isRequired
 };

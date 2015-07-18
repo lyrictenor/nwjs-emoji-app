@@ -1,6 +1,6 @@
 {
   "name": "emoji-app",
-  "version": "0.3.1",
+  "version": "0.4.1",
   "dependencies": {
     "babel-runtime": {
       "version": "5.7.0",
@@ -69,6 +69,18 @@
               }
             }
           }
+        }
+      }
+    },
+    "react-notification": {
+      "version": "2.0.0",
+      "from": "react-notification@*",
+      "resolved": "https://registry.npmjs.org/react-notification/-/react-notification-2.0.0.tgz",
+      "dependencies": {
+        "object-assign": {
+          "version": "2.1.1",
+          "from": "object-assign@>=2.0.0 <3.0.0",
+          "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-2.1.1.tgz"
         }
       }
     },

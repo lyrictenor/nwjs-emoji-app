@@ -1,10 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import IconBox from './IconBox.jsx';
 import EmojiMaster from '../utils/emojiMaster';
+import Notification from 'react-notification';
 
 export default class MainSection extends Component {
   constructor (props, context) {
     super(props, context);
+    this.state = {
+      notification: {
+        isActive: false
+      }
+    };
   }
 
   render () {
@@ -12,11 +18,13 @@ export default class MainSection extends Component {
 
     return (
       <section className='main'>
+        {this.renderNotification()}
         <IconBox
           key='recent'
           category='recent'
           icons={emojis}
           actions={actions}
+          toggleNotification={this.toggleNotification.bind(this)}
           />
         {this.renderEmojisWithCategories()}
       </section>
@@ -36,10 +44,38 @@ export default class MainSection extends Component {
             category={category}
             icons={master.filterByCategory(category)}
             actions={actions}
+            toggleNotification={this.toggleNotification.bind(this)}
             />
         )}
       </div>
     );
+  }
+
+  renderNotification () {
+    const { emojis } = this.props;
+    const emoji = emojis[0];
+    if (Object.keys(emoji).length === 0) {
+      return (
+        <span />
+      );
+    }
+    return (
+      <Notification
+        isActive={this.state.notification.isActive}
+        message={`Copied ${emoji.pattern}`}
+        action={''}
+        onDismiss={this.toggleNotification.bind(this)}
+        dismissAfter={4000}
+        />
+    );
+  }
+
+  toggleNotification () {
+    this.setState({
+      notification: {
+        isActive: !this.state.notification.isActive
+      }
+    });
   }
 }
 
