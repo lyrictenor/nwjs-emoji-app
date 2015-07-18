@@ -1,6 +1,6 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
-import { Connector } from 'redux/react';
+import { Connector } from 'react-redux';
 import MainSection from '../components/MainSection.jsx';
 import * as EmojiActions from '../actions/EmojiActions';
 
