@@ -1,25 +1,61 @@
+# Emoji App
+
 [![Build Status][travis-image]][travis-url]
 
-http://emmenko.github.io/redux-react-router-async-example
+> Easy to use Emoji
 
-This is a boilerplate example showcasing mostly [Redux](https://github.com/gaearon/redux) and [React Router](https://github.com/rackt/react-router).
 
-> Still a **WIP** but it aims to provide different examples or use cases with the two libraries.
+## Installation
+
+[Download Latest Release](https://github.com/lyrictenor/nwjs-emoji-app/releases/latest)
+
+OS X, Windows, Linux support.
+
+
+## Features
+
+Currently, it uses :
+
+* [React](http://facebook.github.io/react/) with [JSX](https://facebook.github.io/jsx/);
+* [Redux](https://github.com/gaearon/redux) for the _Atomic Flux_ architecture. ([Flux implementation](http://facebook.github.io/flux/));
+* [Babel](https://babeljs.io/) for ES6/ES7 transpilation and linting;
+* [Webpack](http://webpack.github.io/) for the tooling;
+* [NW.js](http://nwjs.io/);
+* [nw-builder](https://github.com/mllrsohn/nw-builder) for the packaging NW.js app;
+* [Power-Assert](https://github.com/power-assert-js/power-assert);
+* [Tachikoma.io](http://tachikoma.io/) for interval dependency update with [David](https://github.com/alanshaw/david);
+* [Awesome Node.js CLI (cross platform)](https://github.com/lyrictenor/awesome-nodejs-cross-platform-cli);
+
 
 ## Development
 
-```bash
-npm install
-npm start
+### On NW.js
+
+```
+npm run build:dev && YOUR_NWJS_CMD dist/
 ```
 
-#### Thanks
+### On Browser (development)
 
-- [Redux](https://github.com/gaearon/redux) for the _Atomic Flux_ architecture.
-- [React](https://github.com/facebook/react) for all the goodness.
-- [React-Router](https://github.com/rackt/react-router) for the other goodness.
-- [React-Hot-Loader](https://github.com/gaearon/react-hot-loader) for development fun (and productivity).
-- [Webpack](https://github.com/webpack/webpack) for keeping everything together.
+```
+npm start & open http://localhost:3000/
+```
+
+
+## License
+
+### Emoji App
+
+Copyright (c) 2015 sanemat. Licensed under the MIT license.
+
+### Emoji images
+
+See [license-emoji-images](./license-emoji-images)
+
+### Emoji Text mapping data
+
+See [license-emoji-mapping-data](./license-emoji-mapping-data)
+
 
 [travis-url]: https://travis-ci.org/lyrictenor/nwjs-emoji-app
 [travis-image]: https://travis-ci.org/lyrictenor/nwjs-emoji-app.svg?branch=master
