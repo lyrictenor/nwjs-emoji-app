@@ -7,6 +7,7 @@ export default class IconImage extends Component {
   }
   handleClick (icon) {
     this.props.onAddHistory(icon);
+    this.props.toggleNotification();
   }
 
   render () {
@@ -29,5 +30,6 @@ export default class IconImage extends Component {
 
 IconImage.propTypes = {
   icon: PropTypes.object.isRequired,
-  onAddHistory: PropTypes.func.isRequired
+  onAddHistory: PropTypes.func.isRequired,
+  toggleNotification: PropTypes.func.isRequired
 };
