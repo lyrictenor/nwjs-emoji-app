@@ -1,3 +1,17 @@
+<a name="0.6.0"></a>
+# 0.6.0 (2015-07-18)
+
+* Add license
+* Improve readme
+
+
+### Features
+
+* **footer:** add footer ([4c2c3df](https://github.com/lyrictenor/nwjs-emoji-app/commit/4c2c3df))
+* **utils:** update open externals ([a5d2232](https://github.com/lyrictenor/nwjs-emoji-app/commit/a5d2232))
+
+
+
 <a name="0.5.0"></a>
 # 0.5.0 (2015-07-18)
 
