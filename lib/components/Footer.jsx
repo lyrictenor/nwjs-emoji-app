@@ -17,7 +17,7 @@ export default class Footer extends Component {
             ☃ Emoji App source code is available on <a
               href="https://github.com/lyrictenor/nwjs-emoji-app"
               onClick={onOpenExternals.bind(this)}
-              >GitHub</a>.
+              >github.com/lyrictenor/nwjs-emoji-app</a>.
           </li>
           <li>
             ☺ These emoji data are based on <a
