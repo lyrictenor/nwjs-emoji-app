@@ -2,7 +2,8 @@
 
 [![Build Status][travis-image]][travis-url]
 
-> Easy to use Emoji
+> Choice Emoji and copy to clipboard
+
 
 
 ## Installation
