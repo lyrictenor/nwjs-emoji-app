@@ -6,8 +6,7 @@
 
 Enjoy emoji life!
 
-
-![emoji-app](https://cloud.githubusercontent.com/assets/75448/8761901/4aa96530-2da3-11e5-929e-185ff0f63f61.gif)
+![emoji-app](https://cloud.githubusercontent.com/assets/75448/8763166/7d69468e-2dcb-11e5-8930-1adc4bdc132f.gif)
 
 
 ## :cupid: Installation
