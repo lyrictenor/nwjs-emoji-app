@@ -2,7 +2,7 @@
 
 [![Build Status][travis-image]][travis-url]
 
-> Choice Emoji and copy to clipboard
+> Choice Emoji and copy to clipboard app
 
 ![emoji-app](https://cloud.githubusercontent.com/assets/75448/8761901/4aa96530-2da3-11e5-929e-185ff0f63f61.gif)
 
