@@ -1,4 +1,4 @@
-# Emoji App :innocent:
+# :innocent: Emoji App
 
 [![Build Status][travis-image]][travis-url]
 
@@ -7,14 +7,14 @@
 ![emoji-app](https://cloud.githubusercontent.com/assets/75448/8761901/4aa96530-2da3-11e5-929e-185ff0f63f61.gif)
 
 
-## Installation :cupid:
+## :cupid: Installation
 
 [Download Latest Release](https://github.com/lyrictenor/nwjs-emoji-app/releases/latest)
 
 OS X, Windows, Linux support. :ok_hand:
 
 
-## Features :muscle:
+## :muscle: Features
 
 Currently, it uses :
 
@@ -29,7 +29,7 @@ Currently, it uses :
 * [Awesome Node.js CLI (cross platform)](https://github.com/lyrictenor/awesome-nodejs-cross-platform-cli);
 
 
-## Development :hammer:
+## :hammer: Development
 
 ### On NW.js
 
@@ -44,7 +44,7 @@ npm start & open http://localhost:3000/
 ```
 
 
-## License :memo:
+## :memo: License
 
 ### Emoji App
 
