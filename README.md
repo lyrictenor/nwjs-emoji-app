@@ -2,19 +2,19 @@
 
 [![Build Status][travis-image]][travis-url]
 
-> NW.js app for choosing an emoji and copy to clipboard :laughing:
+> NW.js app for choosing an emoji and copy to clipboard :tada:
 
 ![emoji-app](https://cloud.githubusercontent.com/assets/75448/8761901/4aa96530-2da3-11e5-929e-185ff0f63f61.gif)
 
 
-## Installation
+## Installation :cupid:
 
 [Download Latest Release](https://github.com/lyrictenor/nwjs-emoji-app/releases/latest)
 
-OS X, Windows, Linux support.
+OS X, Windows, Linux support. :ok_hand:
 
 
-## Features
+## Features :muscle:
 
 Currently, it uses :
 
@@ -29,7 +29,7 @@ Currently, it uses :
 * [Awesome Node.js CLI (cross platform)](https://github.com/lyrictenor/awesome-nodejs-cross-platform-cli);
 
 
-## Development
+## Development :hammer:
 
 ### On NW.js
 
@@ -44,7 +44,7 @@ npm start & open http://localhost:3000/
 ```
 
 
-## License
+## License :memo:
 
 ### Emoji App
 
