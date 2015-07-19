@@ -1,3 +1,9 @@
+<a name="1.0.1"></a>
+## 1.0.1 (2015-07-19)
+
+* Use is-nwjs and is-nwjs-mac module
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2015-07-18)
 
