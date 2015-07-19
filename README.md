@@ -69,6 +69,6 @@ These emoji data are based on [Emoji-cheat-sheet.com](http://www.emoji-cheat-she
 
 
 [travis-url]: https://travis-ci.org/lyrictenor/nwjs-emoji-app
-[travis-image]: https://travis-ci.org/lyrictenor/nwjs-emoji-app.svg?branch=master
+[travis-image]: https://img.shields.io/travis/lyrictenor/nwjs-emoji-app/master.svg?style=flat-square
 [release-url]: https://github.com/lyrictenor/nwjs-emoji-app/releases/latest
 [release-image]: https://img.shields.io/github/release/lyrictenor/nwjs-emoji-app.svg?style=flat-square
