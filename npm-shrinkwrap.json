@@ -1,6 +1,6 @@
 {
   "name": "emoji-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "babel-runtime": {
       "version": "5.7.0",
@@ -31,6 +31,17 @@
     "is-nwjs-mac": {
       "version": "1.0.0",
       "from": "is-nwjs-mac@>=1.0.0 <2.0.0"
+    },
+    "nwjs-open-link-in-browser": {
+      "version": "1.0.0",
+      "from": "nwjs-open-link-in-browser@*",
+      "dependencies": {
+        "type-detect": {
+          "version": "1.0.0",
+          "from": "type-detect@>=1.0.0 <2.0.0",
+          "resolved": "https://registry.npmjs.org/type-detect/-/type-detect-1.0.0.tgz"
+        }
+      }
     },
     "react": {
       "version": "0.13.3",
