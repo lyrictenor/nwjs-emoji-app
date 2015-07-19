@@ -1,6 +1,6 @@
 # :innocent: Emoji App
 
-[![Build Status][travis-image]][travis-url]
+[![Release][release-image]][release-url] [![Build Status][travis-image]][travis-url]
 
 > NW.js app for choosing an emoji and copy to clipboard :tada:
 
@@ -70,3 +70,5 @@ These emoji data are based on [Emoji-cheat-sheet.com](http://www.emoji-cheat-she
 
 [travis-url]: https://travis-ci.org/lyrictenor/nwjs-emoji-app
 [travis-image]: https://travis-ci.org/lyrictenor/nwjs-emoji-app.svg?branch=master
+[release-url]: https://github.com/lyrictenor/nwjs-emoji-app/releases/latest
+[release-image]: https://img.shields.io/github/release/lyrictenor/nwjs-emoji-app.svg?style=flat-square
