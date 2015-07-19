@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import onOpenExternals from '../utils/openExternals';
+import onOpenExternals from 'nwjs-open-link-in-browser';
 
 export default class Footer extends Component {
   constructor (props, context) {
