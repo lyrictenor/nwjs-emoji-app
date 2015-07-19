@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## 1.0.2 (2015-07-19)
+
+
+### Features
+
+* **link:** use nwjs-open-link-in-browser ([5667191](https://github.com/lyrictenor/nwjs-emoji-app/commit/5667191))
+
+
+
 <a name="1.0.1"></a>
 ## 1.0.1 (2015-07-19)
 
