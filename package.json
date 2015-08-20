@@ -72,10 +72,10 @@
     "url": "https://github.com/lyrictenor/nwjs-emoji-app.git"
   },
   "scripts": {
-    "build": "npm run clean && npm run resource && webpack",
-    "build:dev": "npm run build -- --config webpack.config.dev.js",
-    "build:dist": "npm run build -- --config webpack.config.production.js",
-    "build:local": "npm run build",
+    "build:app": "npm run clean && npm run resource && webpack",
+    "build:dev": "npm run build:app -- --config webpack.config.dev.js",
+    "build:dist": "npm run build:app -- --config webpack.config.production.js",
+    "build:local": "npm run build:app",
     "changelog": "touch CHANGELOG.md && conventional-changelog -i CHANGELOG.md --overwrite --preset angular",
     "clean": "rimraf dist",
     "david": "david update",
