@@ -2,7 +2,7 @@ language: node_js
 sudo: false
 env: CI=true
 node_js:
-- iojs
+- iojs-2
 script: "npm run verify"
 notifications:
   email:
