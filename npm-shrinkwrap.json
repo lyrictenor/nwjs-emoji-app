@@ -33,15 +33,8 @@
       "from": "is-nwjs-mac@>=1.0.0 <2.0.0"
     },
     "nwjs-open-link-in-browser": {
-      "version": "1.0.0",
-      "from": "nwjs-open-link-in-browser@*",
-      "dependencies": {
-        "type-detect": {
-          "version": "1.0.0",
-          "from": "type-detect@>=1.0.0 <2.0.0",
-          "resolved": "https://registry.npmjs.org/type-detect/-/type-detect-1.0.0.tgz"
-        }
-      }
+      "version": "1.0.2",
+      "from": "nwjs-open-link-in-browser@>=1.0.2 <2.0.0"
     },
     "react": {
       "version": "0.13.3",
