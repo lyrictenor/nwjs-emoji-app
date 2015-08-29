@@ -1,7 +1,7 @@
 {
   "name": "emoji-app",
   "description": "NW.js app for choosing an emoji and copy to clipboard.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Sanemat <ogataken@gmail.com>",
   "bugs": {
     "url": "https://github.com/lyrictenor/nwjs-emoji-app/issues"
