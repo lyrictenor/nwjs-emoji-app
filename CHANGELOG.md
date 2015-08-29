@@ -1,3 +1,9 @@
+<a name="1.0.3"></a>
+## 1.0.3 (2015-08-29)
+
+* Update nwjs-open-link-in-browser
+
+
 <a name="1.0.2"></a>
 ## 1.0.2 (2015-07-19)
 
